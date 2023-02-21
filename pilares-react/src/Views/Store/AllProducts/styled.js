@@ -25,11 +25,12 @@ padding: 2rem;
 `
 
 export const SectionCtn = styled.section`
-width:80%;
+
 display: flex;
 flex-flow: row wrap;
 justify-content: space-around;
-
+width:80%;
+height: 100%;
 flex-grow: 1;
 background: blue;
 @media screen and (max-width: 720px){
@@ -67,7 +68,7 @@ flex-flow: column wrap;
 
 width: 20%;
 max-height: 100%;
-padding: 30px auto;
+padding: auto;
 background:rgb(134, 142, 255);
 border-radius: 15px;
 -webkit-border-radius: 15px;
@@ -114,7 +115,7 @@ justify-content: space-around;
 
 export const Label = styled.div`
 display: flex;
-max-height:59px;
+height: 59px;
 padding: 10px;
 background: white;
 border: 2px solid gray;
@@ -144,6 +145,6 @@ color: white;
 `
 export const FormContainer = styled.form`
 width: 80%;
-
+margin:30px auto;
 
 `
