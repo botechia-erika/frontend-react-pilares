@@ -1,21 +1,21 @@
-const listProducts = [{
+const dataProducts = [{
    id: 0,
    name: 'Camiseta Astro BASKET',
    description: 'Camiseta Astronauta Basketeiro',
    price: 80,
    category: ['Camiseta', 'Adulto'],
    sizeInStock: {
-    pp: [],
-    p: [],
-    m: [],
-    g: [],
-    gg: [],
-    xl: []
+    pp: [1],
+    p: [1],
+    m: [2],
+    g: [3],
+    gg: [4],
+    xl: [1]
    },
    rating: 5,
    numReviews: 0,
-   color: Verde,
-   img: "/p01-Purple-Space-Galaxy.png"
+   color: 'AZUL',
+   img: "https://i.ibb.co/qmZ2mF0/p00-Astro-Basket.jpg"
 },
 {
     id: 1,
@@ -34,7 +34,7 @@ const listProducts = [{
     rating: 4.5,
     numReviews: 0,
     color: 'ROXA',
-    img: "/p01-Purple-Space-Galaxy.png"
+    img: "https://i.ibb.co/WxvbpZT/p01-Purple-Space-Galaxy.jpg"
  
  
  },
@@ -54,8 +54,8 @@ const listProducts = [{
     },
     rating: 4.2,
     numReviews: 0,
-    color: 'CHUMBO',
-    img: "/p01-Purple-Space-Galaxy.png"
+    color: 'AZUL',
+    img: "https://i.ibb.co/vqc6Zzs/p02-Pizza-Galaxy.jpg"
  },
  {
     id: 3,
@@ -73,35 +73,35 @@ const listProducts = [{
     },
     rating: 4.5,
     numReviews: 0,
-    color: 'CHUMBO',
-    img: "/p03-AstroBlaster.png"
+    color: 'PRETO',
+    img: "    https://i.ibb.co/LhmpkQy/p03-Astro-Blaster.jpg"
  },
 /*-------------------------------------*/
 {
     id: 4,
-    name: 'Camiseta Astro DJ',
-    description: 'Camiseta Astro DJ',
+    name: 'Camiseta Astro DJ pizza',
+    description: 'Camiseta Astro DJ and pizzas',
     price: 80,
     category: ['Camiseta', 'Adulto'],
     sizeInStock: {
-     pp: [],
-     p: [],
-     m: [],
-     g: [],
-     gg: [],
-     xl: []
+     pp: [2],
+     p: [3],
+     m: [4],
+     g: [4],
+     gg: [5],
+     xl: [6]
     },
     rating: 5,
     numReviews: 0,
-    color: Verde,
-    img: "/p01-Purple-Space-Galaxy.png"
+    color: "AZUL",
+    img: "https://i.ibb.co/Rvr1jwm/p04-Astro-DJ.jpg"
  },
  {
      id: 5,
-     name: 'Camiseta Purple Space Galaxy', 
-     description: 'Camiseta Algodao com estampa via-lactea',
+     name: 'Camiseta Purple ASTRO BEGE FEMININo', 
+     description: 'Camiseta Algodao com ASTRO BEGE',
      price: 80,
-     category: ['Camiseta', 'Adulto'],
+     category: ['Camiseta', 'Adulto', 'Feminino'],
      sizeInStock: {
       pp: [2],
       p: [1],
@@ -112,17 +112,17 @@ const listProducts = [{
      },
      rating: 4.5,
      numReviews: 0,
-     color: 'ROXA',
-     img: "/p01-Purple-Space-Galaxy.png"
+     color: 'BEGE',
+     img: "https://i.ibb.co/SmzQtHK/p05-Astron-Naut-F.jpg"
   
   
   },
   {
      id: 6,
-     name: 'Camiseta Pizza on Galaxy', 
-     description: 'Camiseta Algodao com estampa Pizza Galaxy',
+     name: 'Camiseta Astro Rainbow Pride', 
+     description: 'Camiseta Algodao com estampa Rainbow Pride',
      price: 80,
-     category: ['Camiseta', 'Adulto'],
+     category: ['Camiseta', 'Adulto', "Pride"],
      sizeInStock: {
       pp: [2],
       p: [1],
@@ -133,15 +133,15 @@ const listProducts = [{
      },
      rating: 4.2,
      numReviews: 0,
-     color: 'CHUMBO',
-     img: "/p01-Purple-Space-Galaxy.png"
+     color: 'ROSA ESCURO',
+     img: "https://i.ibb.co/sJtH41n/p06-Astro-Rainbow.jpg"
   },
   {
      id: 7,
-     name: 'Camiseta Astro Blaster', 
-     description: 'Camiseta Algodao com estampa Astro Blaster',
+     name: 'Camiseta Astro Gorilla Feminino', 
+     description: 'Camiseta Algodao com estampa Astro Gorilla Feminino',
      price: 80,
-     category: ['Camiseta', 'Adulto'],
+     category: ['Camiseta', 'Adulto', 'Feminino'],
      sizeInStock: {
       pp: [2],
       p: [1],
@@ -152,28 +152,28 @@ const listProducts = [{
      },
      rating: 4.5,
      numReviews: 0,
-     color: 'CHUMBO',
-     img: "/p03-AstroBlaster.png"
+     color: 'Azul',
+     img: "https://i.ibb.co/8N6G0Tc/p07-Astro-Gorilla-F.jpg"
   },
 /*--------*/
 {
     id:8,
-    name: 'Camiseta Astro BASKET',
-    description: 'Camiseta Astronauta Basketeiro',
+    name: 'Camiseta Astro AstroLiberty',
+    description: 'Camiseta Astronauta and Liberty',
     price: 80,
     category: ['Camiseta', 'Adulto'],
     sizeInStock: {
-     pp: [],
-     p: [],
-     m: [],
-     g: [],
-     gg: [],
-     xl: []
+     pp: [3],
+     p: [3],
+     m: [1],
+     g: [0],
+     gg: [0],
+     xl: [0]
     },
     rating: 5,
     numReviews: 0,
-    color: Verde,
-    img: "/p01-Purple-Space-Galaxy.png"
+    color: "BRANCO",
+    img: "https://i.ibb.co/kB7cPyz/p08-Astro-Liberty.jpg"
  },
  {
      id: 9,
@@ -191,8 +191,8 @@ const listProducts = [{
      },
      rating: 4.5,
      numReviews: 0,
-     color: 'ROXA',
-     img: "/p09-AstroStanLee.png"
+     color: 'PRETO',
+     img: "https://i.ibb.co/BTJVYLT/p09-Astro-Stan-Lee.jpg"
   
   
   },
@@ -213,12 +213,12 @@ const listProducts = [{
      rating: 4.2,
      numReviews: 0,
      color: 'CHUMBO',
-     img: "/p10-AstroMision.png"
+     img: "https://i.ibb.co/BCtZRBP/p10-Astro-Mision.jpg"
   },
   {
      id: 11,
-     name: 'Camiseta Astro Blaster', 
-     description: 'Camiseta Algodao com estampa Astro Blaster',
+     name: 'Camiseta Astro Eternity', 
+     description: 'Camiseta Algodao com estampa Astro Eternity',
      price: 80,
      category: ['Camiseta', 'Adulto'],
      sizeInStock: {
@@ -231,16 +231,16 @@ const listProducts = [{
      },
      rating: 4.5,
      numReviews: 0,
-     color: 'CHUMBO',
-     img: "/p11-AstroEternity.png"
+     color: 'PRETO',
+     img: "https://i.ibb.co/phDZ3vR/p11-Astro-Eternity.jpg"
   },
  /*-------------------------------------*/
  {
      id: 12,
-     name: 'Camiseta Astro BASKET',
-     description: 'Camiseta Astronauta Basketeiro',
+     name: 'Camiseta Astro Alien',
+     description: 'Camiseta estampa Alien',
      price: 80,
-     category: ['Camiseta', 'Adulto'],
+     category: ['Camiseta', 'Adulto', 'Feminino'],
      sizeInStock: {
         pp: [2],
         p: [1],
@@ -251,15 +251,15 @@ const listProducts = [{
      },
      rating: 5,
      numReviews: 0,
-     color: Verde,
-     img: "/p01-Purple-Space-Galaxy.png"
+     color: "PRETO",
+     img: "https://i.ibb.co/Sn8pvpm/p13-Astro-Alien-F.jpg"
   },
   {
       id: 13,
-      name: 'Camiseta Astro Alien Feminina', 
-      description: 'Camiseta Algodao com estampa via-lactea',
+      name: 'Camiseta Astro Ballons', 
+      description: 'Camiseta Algodao com estampa Astro Ballons',
       price: 80,
-      category: ['Camiseta', 'Adulto', 'Feminino'],
+      category: ['Camiseta', 'Adulto'],
       sizeInStock: {
        pp: [2],
        p: [1],
@@ -270,8 +270,8 @@ const listProducts = [{
       },
       rating: 4.5,
       numReviews: 0,
-      color: 'ROXA',
-      img: "/p13-AstroAlien-F.png"
+      color: 'PRETO',
+      img: "https://i.ibb.co/3pZdx0P/p12-Astro-Ballons.jpg"
    
    
    },
@@ -292,7 +292,7 @@ const listProducts = [{
       rating: 4.2,
       numReviews: 0,
       color: 'AZUL',
-      img: "/p14-Astro-Among-Us.png"
+      img: "https://i.ibb.co/P1LX4M8/p14-Astro-Among-Us.jpg"
    },
    {
       id: 15,
@@ -311,7 +311,7 @@ const listProducts = [{
       rating: 5,
       numReviews: 0,
       color: 'BRANCO',
-      img: "/p14-AlienDont.png"
+      img: "https://i.ibb.co/BwL69Wj/p15-Alien-Dont.jpg"
    },
  
 ]
