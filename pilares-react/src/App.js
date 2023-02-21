@@ -3,19 +3,20 @@ import React from 'react';
 import './App.css';
 
 import {HeaderNav} from './Partials/HeaderNav'
-import { AllProducts } from './Views/Store/AllProducts/index';
+import { Products } from './Views/Store/Products/index';
 import { useState } from'react'
 
 function App() {
+
+const  [views, setViews] = useState(1)
+
 
      return (
  
   <div>
 
-      <HeaderNav 
-   
-      />
-< AllProducts/>
+      <HeaderNav/>  {views === 1 ? <Products/> : <section>BUSCA </section>}
+
 </div>
   );
 }

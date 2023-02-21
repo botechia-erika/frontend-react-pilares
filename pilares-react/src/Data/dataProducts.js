@@ -1,4 +1,4 @@
-const dataProducts = [{
+export const dataProducts = [{
    id: 0,
    name: 'Camiseta Astro BASKET',
    description: 'Camiseta Astronauta Basketeiro',
