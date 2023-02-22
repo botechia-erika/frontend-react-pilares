@@ -312,6 +312,6 @@ export const dataProducts = [{
       numReviews: 0,
       color: 'BRANCO',
       img: "https://i.ibb.co/BwL69Wj/p15-Alien-Dont.jpg"
-   },
+   }
  
 ]

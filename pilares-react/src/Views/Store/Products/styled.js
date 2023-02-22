@@ -32,7 +32,7 @@ justify-content: space-around;
 width:80%;
 height: 100%;
 flex-grow: 1;
-background: blue;
+background: #dbe1fd;
 @media screen and (max-width: 720px){
     width: 100%;
 
@@ -61,7 +61,7 @@ min-height: 505px;
 
     margin: 30px auto;
     background-color: #fffaef;
-    box-shadow: rgb(104, 80, 37) -1.95px 1.95px 1.6px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     align-items: center;
     margin: 0px auto;

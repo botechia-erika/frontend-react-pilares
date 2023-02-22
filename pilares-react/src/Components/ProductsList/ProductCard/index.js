@@ -13,9 +13,8 @@ export function CardProduct( {product}) {
 </li><li>
 <strong>Cor: </strong>{product.color}</li>
 
-<li><strong>Capacidade: </strong>550ml</li>
+<li><strong>Tamanos: </strong>550ml</li>
 
-<li><strong>R$ 142.9</strong></li>
 
 
 </ul>  <button class="btn-add" id="btn-add-1">Agregar em Carrinho</button>
