@@ -4,6 +4,10 @@ import {Page, Card, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, Articl
 import { Checkbox } from './../../../Components/Filter/checkbox';
 import {dataProducts} from './../../../Data/dataProducts'
 import { useState } from 'react';
+
+const productTotal = (a, b)=>{
+  return a * b;
+}
 export function Products({img1}, {product}) {
 img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
   const checkValue=1
@@ -60,35 +64,59 @@ img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
   
       
          
-  <AsideRight>
-    {
-            carrito.length >= 1 ? (
-                carrito.map((cartProduct) => ( <
-                    div key = { cartProduct.id } >
-                            <SectionTitle>
+  <AsideRight>         <SectionTitle>
         Minhas COMPRAS
    
-</SectionTitle>  <
-                    h5 > { cartProduct.name } < /h5>	 <
-                    p > Quantidade: { cartProduct.quantity } < /p>	 <
-                    p > Preco Total Item R$: < /p> <p>{cartProduct.quantity * cartProduct.price}</p >
-                    <
-                    button onClick = {
+</SectionTitle> 
+<table>
+  <thead>
+    <tr>
+      <th rowSpan="4">Produtos</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+                    <td>Produto </td>	
+                    <td> Quantidade: </td>	 
+                    <td>TOTAL </td>
+                    <td colSpan="2">
+                   EDITAR
+                   </td>
+      </tr>
+    {
+            carrito.length >= 1 ? (
+        
+                carrito.map((cartProduct) => ( <
+                    tr key = { cartProduct.id } >
+                    <td> { cartProduct.name } </td>	
+                    <td> { cartProduct.quantity } </td>	 
+                    <td>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</td>
+                    <td>
+                    <button onClick = {
                         () => lessProduct(cartProduct)
-                    } > Delete < /button>	 <
-                    button onClick = {
+                    } >Deletar 1</button>
+                    </td><td>	 <button onClick = {
                         () => addCart(cartProduct)
-                    } > < i className = "fa-solid fa-cart-plus" > < /i>+1Produto</button >
-                    <
-                    hr / >
-                    <
-                    /div>	
+                    } > <i className = "fa-solid fa-cart-plus" > < /i>+1</button >
+                  </td></tr>
+          
                 ))
-            ) : ( <
-               SectionTitle> Carrinho Vazio... < /SectionTitle>	
-            )
-        }
+            ) : ( 
+              <tr>
+              <td Span="4">
+               Carrinho Vazio... 
+            </td>
+               </tr>
 
+               )
+        }
+        </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>TOTAL: 00</td>
+                    </tr>
+                  </tfoot>
+                  </table>	
     <FormContainer>
                   <SectionTitle>
          FILTRAR BUSCA
