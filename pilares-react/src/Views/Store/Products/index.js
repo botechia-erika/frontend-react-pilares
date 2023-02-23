@@ -2,7 +2,7 @@ import React from 'react';
 import {Page, Card, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer} from './styled'
 
 import { Checkbox } from './../../../Components/Filter/checkbox';
-import {dataProducts} from './../../../Data/dataProducts'
+import dataProducts from './../../../Data/dataProducts'
 import { useState } from 'react';
 import { CardProduct } from '../../../Components/ProductsList/ProductCard';
 
@@ -98,7 +98,7 @@ img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
                     } >Deletar 1</button>
                     </td><td>	 <button onClick = {
                         () => addCart(cartProduct)
-                    } > <i className = "fa-solid fa-cart-plus" > < /i>+1</button >
+                    } > <i className = "fa-solid fa-cart-plus" > </i>+1</button >
                   </td></tr>
           
                 ))
@@ -168,7 +168,7 @@ checkValue={checkValue}
   <span><strong>M: {product.sizeInStock.m}</strong></span>
 
 </div><button onClick = {() => addCart(product)}>
-  <i className = "fa-solid fa-cart-plus" > </i>/i>+1Produto</button >
+  <i className = "fa-solid fa-cart-plus" > </i>+1Produto</button >
 
 
 
