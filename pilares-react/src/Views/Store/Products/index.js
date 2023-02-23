@@ -4,7 +4,7 @@ import {Page, Card, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, Articl
 import { Checkbox } from './../../../Components/Filter/checkbox';
 import dataProducts from './../../../Data/dataProducts'
 import { useState } from 'react';
-import { CardProduct } from '../../../Components/ProductsList/ProductCard';
+import { CardProduct } from '../../../Components/ProductsList/CardProduct/index';
 
 const productTotal = (a, b)=>{
   return a * b;
@@ -159,15 +159,8 @@ checkValue={checkValue}
            
 <CardProduct product={product}/>
 
-<div>
-  <span><strong>PP: {product.sizeInStock.pp}</strong></span>
-  <span><strong>P: {product.sizeInStock.p}</strong></span>
-  <span><strong>M: {product.sizeInStock.m}</strong></span>
-  <span><strong>PP: {product.sizeInStock.g}</strong></span>
-  <span><strong>P: {product.sizeInStock.gg}</strong></span>
-  <span><strong>M: {product.sizeInStock.m}</strong></span>
 
-</div><button onClick = {() => addCart(product)}>
+<button onClick = {() => addCart(product)}>
   <i className = "fa-solid fa-cart-plus" > </i>+1Produto</button >
 
 
