@@ -4,6 +4,7 @@ import {Page, Card, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, Articl
 import { Checkbox } from './../../../Components/Filter/checkbox';
 import {dataProducts} from './../../../Data/dataProducts'
 import { useState } from 'react';
+import { CardProduct } from '../../../Components/ProductsList/ProductCard';
 
 const productTotal = (a, b)=>{
   return a * b;
@@ -156,16 +157,9 @@ checkValue={checkValue}
  {products.map(product=>
         <ArticleBox key={product.id}>
            
-        <img src={product.img} alt="termo 1" />           
-<h2>{product.name}</h2>
-<ul>
-<li><strong>Preco: </strong>R${product.price}</li>
-<li>{product.description}
-</li><li>
-<strong>Cor: </strong>{product.color}</li>
+<CardProduct product={product}/>
 
-
-<li>
+<div>
   <span><strong>PP: {product.sizeInStock.pp}</strong></span>
   <span><strong>P: {product.sizeInStock.p}</strong></span>
   <span><strong>M: {product.sizeInStock.m}</strong></span>
@@ -173,13 +167,8 @@ checkValue={checkValue}
   <span><strong>P: {product.sizeInStock.gg}</strong></span>
   <span><strong>M: {product.sizeInStock.m}</strong></span>
 
-</li>
-
-
-</ul><
-                button onClick = {
-                    () => addCart(product)
-                } > < i className = "fa-solid fa-cart-plus" > < /i>+1Produto</button >
+</div><button onClick = {() => addCart(product)}>
+  <i className = "fa-solid fa-cart-plus" > </i>/i>+1Produto</button >
 
 
 

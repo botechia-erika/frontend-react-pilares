@@ -1,26 +1,17 @@
 import React from 'react';
-import {ArticleBox} from './styled'    
 export function CardProduct( {product}) {
 
+return(
 
-<ArticleBox key={product.id}>
-           
+<div>
             <img src={product.img} alt="termo 1" />           
  <h2>{product.name}</h2>
-<ul>
-<li><strong>Preco: </strong>{product.price}</li>
-<li>{product.description}
-</li><li>
-<strong>Cor: </strong>{product.color}</li>
 
-<li><strong>Tamanos: </strong>550ml</li>
+<p><strong>Preco: </strong>{product.price}</p>
+<p>{product.description}
+</p><p>
+<strong>Cor: </strong>{product.color}</p>
 
-
-
-</ul>  <button class="btn-add" id="btn-add-1">Agregar em Carrinho</button>
-
-
-
-
-        </ArticleBox>
+<p><strong>Tamanhos em STOCK: </strong></p>
+</div>
 )}
