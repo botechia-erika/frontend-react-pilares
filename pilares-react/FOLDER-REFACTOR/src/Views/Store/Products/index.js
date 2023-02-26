@@ -53,13 +53,6 @@ img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
      }
  };
 
- const filterName = (value) => {
-  console.log(value);
-   setProducts(dataProducts.filter((product) => product.name.toLowerCase().includes(value.toLowerCase())));
- }
-
-
-
   return (
     
       <Page>  
@@ -127,12 +120,12 @@ img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
                   </table>	
     <FormContainer>
                   <SectionTitle>
-         FILTRAR BUSCA :
+         FILTRAR BUSCA
    
 </SectionTitle>
     <div class="formGroup">
 					<label htmlFor="productName" class="form-label">Nome Produto:</label>
-					<input type="text" id="productName" name="productName" placeholder="Camiseta Modelo" onChange={(e)=>filterName(e.target.value)}/>
+					<input type="text" id="productName" name="productName" placeholder="Camiseta Modelo" class="form-input"/>
 				</div>
 <Checkbox
 checkValue={checkValue}
@@ -157,10 +150,7 @@ checkValue={checkValue}
           <SectionCtn> 
 
 <SectionTitle>
-        PRODUTOS 
-        <br/>
-
-        (TOTAL DE PRODUTOS :{products.length} )
+        PRODUTOS
    
 </SectionTitle>
 
