@@ -1,5 +1,5 @@
 import React from 'react';
-import {Page, Card, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer} from './styled'
+import {Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText} from './styled'
 
 import { Checkbox } from './../../../Components/Filter/checkbox';
 import dataProducts from './../../../Data/dataProducts'
@@ -11,10 +11,13 @@ const productTotal = (a, b)=>{
 }
 export function Products({img1}, {product}) {
 img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
-  const checkValue=1
+const [checkValue, setCheckValue] = useState(false)
   const [products , setProducts] = useState(dataProducts) 
- 
- console.log(product)
+  console.log(product) 
+  const [minPrice, setMinPrice] = useState(30)
+console.log(minPrice)
+  const [maxPrice, setMaxPrice] = useState(300)
+  
  const [carrito, setCarrito] = useState([]);
 
  const addCart = (product) => {
@@ -54,10 +57,33 @@ img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
  };
 
  const filterName = (value) => {
-  console.log(value);
+  console.log(products, value);
    setProducts(dataProducts.filter((product) => product.name.toLowerCase().includes(value.toLowerCase())));
  }
 
+ const filterPriceMin = (value) => {
+  console.log( value);
+minPrice !== value ?
+
+   setProducts(dataProducts.filter((product) =>
+    product.price >= value)  )
+    :
+  
+setMinPrice(30)
+  
+  }
+  const filterPriceMax = (value) => {
+    console.log( value);
+ (maxPrice && maxPrice !== value) ?
+  
+     setProducts(products.filter((product) =>
+      product.price <= value)  )
+      :
+    
+  setMinPrice(200)
+    
+    }
+  // Toggle seletedYear state
 
 
   return (
@@ -130,27 +156,23 @@ img1="https://th.bing.com/th?id=OP.vupysievYvdBpw474C474&o=5&pid=21.1"
          FILTRAR BUSCA :
    
 </SectionTitle>
-    <div class="formGroup">
+    <FormFilter>
+     
 					<label htmlFor="productName" class="form-label">Nome Produto:</label>
-					<input type="text" id="productName" name="productName" placeholder="Camiseta Modelo" onChange={(e)=>filterName(e.target.value)}/>
-				</div>
-<Checkbox
-checkValue={checkValue}
-/> 
-
-<Checkbox
-checkValue={checkValue}
-/> 
+				 <Label>	<InputText type="text" id="productName" name="productName" placeholder=" Modelo" onChange={(e)=>filterName(e.target.value)}
+          />  </Label>
 
 
-<Checkbox
-checkValue={checkValue}
-/> 
+          
+					<label htmlFor="minPrice" class="form-label">  Preco Minimo:</label>
+				 <Label>	<InputText type="number" id="minPrice" name="minPrice" min="30" placeholder="R$30" onChange={(e)=>filterPriceMin(e.target.value)}
+          />  </Label>
 
-<Checkbox
-checkValue={checkValue}
-/> 
-
+<label htmlFor="maxPrice" class="form-label">  Preco Maximo:</label>
+				 <Label>	<InputText type="number" id="maxPrice" name="maxPrice" min="30" max="200" placeholder="R$200" onChange={(e)=>filterPriceMax(e.target.value)}
+          />  </Label>
+				</FormFilter>
+      
 
 </FormContainer>
           </AsideRight> 

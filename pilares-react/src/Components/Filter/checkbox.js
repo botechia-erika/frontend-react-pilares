@@ -35,10 +35,13 @@ border-radius: 15px;
 
 
 export function Checkbox(checkValue) {
+
     const [checked, setChecked] = useState(false);
     
     function handleCheckboxChange(){
-       setChecked(!checked);
+       if(!checked){
+        setChecked(!checked);
+        }
     }
 
 console.log(setChecked)       

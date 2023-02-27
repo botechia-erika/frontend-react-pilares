@@ -10,6 +10,13 @@ export const AsideLeft = styled.aside`
 display: flex;
 width: 25%;`
 
+
+export const FormFilter = styled.form`
+display: flex;
+flex-flow: column wrap;
+width: 80%;
+
+`
 export const MainCtn = styled.main`
 flex-grow: 1;
 background: #efefef;
@@ -41,9 +48,20 @@ background: #dbe1fd;
 `
 
 
-export const InputSelect = styled.select`
+export const InputSelect = styled.option`
 height: 30px;
-border-radius: 15px;
+display: flex;
+flex-flow: column wrap;
+   width: 80%;
+   height: 40px;
+   justify-content: center;
+
+margin-left: 10%;
+   border-radius: 15px;
+   align-self:center;
+text-align: center;
+   display: flex;
+   font-size: 2rem;
 `
 
 
@@ -124,4 +142,25 @@ margin:30px auto;
 justify-content: center;
 text-align:: center;
 align-self: center;
+`
+
+
+export const  InputText = styled.input`
+display: flex;
+flex-flow: column wrap;
+   width: 80%;
+   height: 40px;
+   justify-content: center;
+
+margin-left: 10%;
+   border-radius: 5px;
+   align-self:center;
+text-align: center;
+   display: flex;
+   font-size: 2rem;
+
+ :active{
+    background-color: gold;
+   }
+
 `

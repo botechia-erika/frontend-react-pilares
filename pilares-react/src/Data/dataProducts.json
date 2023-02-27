@@ -37,7 +37,7 @@
      "id":1,
      "name":"Camiseta Purple Space Galaxy",
      "description":"Camiseta Algodao com estampa via-lactea",
-     "price":80,
+     "price": 180,
      "category":[
        "Camiseta",
        "Adulto"
@@ -71,7 +71,7 @@
      "id":2,
      "name":"Camiseta Pizza on Galaxy",
      "description":"Camiseta Algodao com estampa Pizza Galaxy",
-     "price":80,
+     "price":30,
      "category":[
        "Camiseta",
        "Adulto"
@@ -105,7 +105,7 @@
      "id":3,
      "name":"Camiseta Astro Blaster",
      "description":"Camiseta Algodao com estampa Astro Blaster",
-     "price":80,
+     "price": 50,
      "category":[
        "Camiseta",
        "Adulto"
@@ -139,7 +139,7 @@
      "id":4,
      "name":"Camiseta Astro DJ pizza",
      "description":"Camiseta Astro DJ and pizzas",
-     "price":80,
+     "price": 50,
      "category":[
        "Camiseta",
        "Adulto"
@@ -173,7 +173,7 @@
      "id":5,
      "name":"Camiseta Purple ASTRO BEGE FEMININo",
      "description":"Camiseta Algodao com ASTRO BEGE",
-     "price":80,
+     "price": 100,
      "category":[
        "Camiseta",
        "Adulto",
